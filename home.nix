@@ -3,6 +3,7 @@
 {
   imports = [
     ./user/shell/sh.nix
+    ./user/ssh/ssh.nix
     ./user/app/git/git.nix
     ./user/font/font.nix
     ./user/app/terminal/alacritty.nix

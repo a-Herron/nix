@@ -4,6 +4,7 @@
   imports = [
     ./user/shell/sh.nix
     ./user/app/git/git.nix
+    ./user/font/font.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should

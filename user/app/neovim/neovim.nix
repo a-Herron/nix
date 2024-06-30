@@ -5,7 +5,7 @@
     neovim
   ];
 
-  home.files = {
+  home.file = {
 
   };
 }

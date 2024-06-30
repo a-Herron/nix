@@ -8,6 +8,9 @@
     userName = "a-Herron";
     userEmail = "austinherronmt+git@gmail.com";
     aliases = {
+      s = "status";
+      cm = "commit -m";
+      ca = "commit -am";
       co = "checkout";
       pu = "push";
       aa = "add --all";

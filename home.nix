@@ -8,6 +8,7 @@
     ./user/font/font.nix
     ./user/app/terminal/alacritty.nix
     ./user/app/browsers/firefox/firefox.nix
+    ./user/app/neovim/neovim.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should

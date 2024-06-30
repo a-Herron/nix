@@ -5,6 +5,8 @@
     ./user/shell/sh.nix
     ./user/app/git/git.nix
     ./user/font/font.nix
+    ./user/app/terminal/alacritty.nix
+    ./user/app/browsers/firefox/firefox.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should

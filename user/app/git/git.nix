@@ -10,6 +10,7 @@
     aliases = {
       co = "checkout";
       pu = "push";
+      aa = "add --all";
     };
     extraConfig = {
       init.defaultBranch = "main";

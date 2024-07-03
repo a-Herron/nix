@@ -12,6 +12,9 @@
       theme = "avit";
       plugins = [ "git" "fzf" ];
     };
+    shellAliases = {
+      "g" = "git";
+   };
   };
 
   home.packages = with pkgs; [

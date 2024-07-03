@@ -14,6 +14,7 @@
     };
     shellAliases = {
       "g" = "git";
+      "hms" = "home-manager switch --flake ~/.config/nixos";
    };
   };
 

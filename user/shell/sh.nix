@@ -7,6 +7,9 @@
 
   programs.zsh = {
     enable = true;
+    initExtra = ''
+      bindkey -v
+    '';
     oh-my-zsh = {
       enable = true;
       theme = "avit";
@@ -18,9 +21,22 @@
    };
   };
 
+  home.file = {
+    ".config/alacritty" = {
+      source = ./alacritty;
+      recursive = true;
+    };
+
+    ".config/tmux" = {
+      source = ./tmux;
+      recursive = true;
+    };
+  };
+
   home.packages = with pkgs; [
     zsh
     fzf
     alacritty
+    tmux
   ];
 }

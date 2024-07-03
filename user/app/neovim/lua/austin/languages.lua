@@ -25,7 +25,16 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 lsp.setup()
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 
+lspconfig.yamlls.setup{}
+lspconfig.fsautocomplete.setup{}
+lspconfig.dockerls.setup{}
+lspconfig.docker_compose_language_service.setup{}
+lspconfig.jsonls.setup {
+  capabilities = capabilities
+}
 lspconfig.csharp_ls.setup{}
 
 lspconfig.lua_ls.setup {

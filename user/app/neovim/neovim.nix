@@ -5,8 +5,15 @@
     xclip
     ripgrep
     dotnetCorePackages.sdk_8_0_2xx
+    nodejs_20
+
     lua-language-server
     csharp-ls
+    dockerfile-language-server-nodejs
+    fsautocomplete
+    vscode-langservers-extracted
+    docker-compose-language-service
+    yaml-language-server
   ];
 
   programs.neovim = {

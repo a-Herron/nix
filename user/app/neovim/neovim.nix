@@ -25,6 +25,7 @@
       vimPlugins.telescope-nvim
       vimPlugins.telescope-fzf-native-nvim
       vimPlugins.telescope-ui-select-nvim
+      vimPlugins.zen-mode-nvim
 
       vimPlugins.nvim-treesitter.withAllGrammars
 

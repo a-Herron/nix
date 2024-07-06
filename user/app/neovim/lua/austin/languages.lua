@@ -7,8 +7,8 @@ lsp.on_attach(function(client, bufnr)
   local opts = { buffer = bufnr, remap = false }
 
   vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
-  vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
-  vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
+  vim.keymap.set("n", "[d", function() vim.diagnostic.goto_prev() end, opts)
+  vim.keymap.set("n", "]d", function() vim.diagnostic.goto_next() end, opts)
   vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end, opts)
 
   vim.keymap.set("n", "gd", telescope_builtin.lsp_definitions, opts)
@@ -35,7 +35,11 @@ lspconfig.docker_compose_language_service.setup{}
 lspconfig.jsonls.setup {
   capabilities = capabilities
 }
-lspconfig.csharp_ls.setup{}
+--lspconfig.csharp_ls.setup{}
+lspconfig.omnisharp.setup {
+  cmd = { "OmniSharp" },
+}
+
 lspconfig.hls.setup{}
 
 lspconfig.lua_ls.setup {

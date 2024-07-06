@@ -9,6 +9,7 @@
 
     lua-language-server
     csharp-ls
+    omnisharp-roslyn
     dockerfile-language-server-nodejs
     fsautocomplete
     vscode-langservers-extracted
@@ -36,6 +37,7 @@
       vimPlugins.cmp-path
       vimPlugins.cmp-nvim-lsp
       vimPlugins.cmp-nvim-lua
+      vimPlugins.cmp-nvim-lsp-signature-help
       vimPlugins.luasnip
       vimPlugins.cmp_luasnip
 
@@ -55,6 +57,10 @@
     };
     ".config/nvim/lua" = {
       source = ./lua;
+      recursive = true;
+    };
+    "omnisharp" = {
+      source = pkgs.omnisharp-roslyn;
       recursive = true;
     };
   };

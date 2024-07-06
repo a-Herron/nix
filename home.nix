@@ -9,6 +9,8 @@
     ./user/app/terminal/alacritty.nix
     ./user/app/browsers/firefox/firefox.nix
     ./user/app/neovim/neovim.nix
+    # ./user/hypr/hypr.nix
+    ./user/i3/i3.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should

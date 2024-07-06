@@ -55,6 +55,8 @@ bar {
   }
 }
 
+focus_follows_mouse no
+
 for_window [class="^.*"] border pixel 0
 
 # i3 config file (v4)

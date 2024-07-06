@@ -36,6 +36,7 @@ lspconfig.jsonls.setup {
   capabilities = capabilities
 }
 lspconfig.csharp_ls.setup{}
+lspconfig.hls.setup{}
 
 lspconfig.lua_ls.setup {
   on_init = function(client)

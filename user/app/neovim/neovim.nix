@@ -14,6 +14,9 @@
     vscode-langservers-extracted
     docker-compose-language-service
     yaml-language-server
+    haskell-language-server
+    ghc
+    cabal-install
   ];
 
   programs.neovim = {

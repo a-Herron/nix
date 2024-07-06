@@ -11,7 +11,10 @@
       ca = "commit -am";
       co = "checkout";
       p = "push";
+      a = "add";
       aa = "add --all";
+      d = "diff";
+      l = "log --oneline";
     };
     extraConfig = {
       init.defaultBranch = "main";

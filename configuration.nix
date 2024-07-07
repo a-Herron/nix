@@ -13,6 +13,26 @@
       ./system/i3/i3.nix
     ];
 
+  virtualisation.libvirtd = {
+    enable = true;
+    qemu = {
+      package = pkgs.qemu_kvm;
+      runAsRoot = true;
+      swtpm.enable = true;
+      ovmf = {
+        enable = true;
+        packages = [(pkgs.OVMF.override {
+          secureBoot = true;
+          tpmSupport = true;
+        }).fd];
+      };
+    };
+  };
+  virtualisation.spiceUSBRedirection.enable = true;
+  services.spice-vdagentd.enable = true;
+  programs.dconf.enable = true;
+  virtualisation.docker.enable = true;
+
   # Bootloader.
   boot.loader.grub.enable = true;
   boot.loader.grub.device = "/dev/nvme0n1";
@@ -99,7 +119,7 @@
     isNormalUser = true;
     shell = pkgs.zsh;
     description = "austin";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" ];
     uid = 1000;
     packages = with pkgs; [
     #  thunderbird
@@ -114,6 +134,12 @@
   environment.systemPackages = with pkgs; [
     alsa-utils
     pavucontrol
+    virt-manager
+    spice
+    spice-gtk
+    spice-protocol
+    win-virtio
+    win-spice
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
   ];

@@ -15,6 +15,10 @@
       aa = "add --all";
       d = "diff";
       l = "log --oneline";
+      rh = "reset --hard HEAD";
+      rs = "reset --soft";
+      m = "merge master";
+      mm = "merge main";
     };
     extraConfig = {
       init.defaultBranch = "main";

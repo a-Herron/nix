@@ -1,3 +1,4 @@
+require("austin.exec")
 require("austin.options")
 require("austin.remap")
 require("austin.telescope")

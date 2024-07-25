@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./user/app/warpd/warpd.nix
     ./user/shell/sh.nix
     ./user/ssh/ssh.nix
     ./user/app/git/git.nix
@@ -11,6 +12,9 @@
     ./user/app/neovim/neovim.nix
     # ./user/hypr/hypr.nix
     ./user/i3/i3.nix
+    ./user/nuget/nuget.nix
+    ./user/secrets/secrets.nix
+    ./user/app/jetbrains/jetbrains.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -29,6 +33,7 @@
 
   home.packages = with pkgs; [
     pavucontrol
+    awscli2
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of

@@ -13,6 +13,12 @@
       ./system/i3/i3.nix
     ];
 
+  security.pki.certificateFiles = [
+    ./key.pem
+    ./cacert.pem
+    ./cert.pem
+  ];
+
   virtualisation.libvirtd = {
     enable = true;
     qemu = {
@@ -49,6 +55,15 @@
   boot.initrd.luks.devices."luks-326254d2-135a-456a-9bb3-81f20f4eaa30".keyFile = "/crypto_keyfile.bin";
   boot.initrd.luks.devices."luks-8eb101e1-db16-4a5c-876f-cf00ad7a4176".keyFile = "/crypto_keyfile.bin";
   networking.hostName = "nixos"; # Define your hostname.
+  networking.extraHosts = ''
+    127.0.0.1  svcs.submittable.local
+    127.0.0.1  static.submittable.local
+
+    192.168.122.35  local.submishmash.com
+    192.168.122.35  localjournal.submishmash.com
+    192.168.122.35  localadmin.submishmash.com
+    
+  '';
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -158,7 +173,7 @@
   services.openssh.enable = true;
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
+  networking.firewall.allowedTCPPorts = [ 3000 3001 80 443 5432 1433 6379 8585 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;

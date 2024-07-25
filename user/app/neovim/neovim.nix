@@ -39,6 +39,7 @@
       vimPlugins.cmp-nvim-lua
       vimPlugins.luasnip
       vimPlugins.cmp_luasnip
+      vimPlugins.cmp-nvim-lsp-signature-help
 
       vimPlugins.plenary-nvim
 

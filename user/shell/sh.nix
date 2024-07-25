@@ -16,8 +16,16 @@
       plugins = [ "git" "fzf" ];
     };
     shellAliases = {
+      "opr" = "op run --no-masking --";
       "g" = "git";
       "hms" = "home-manager switch --flake ~/.config/nixos";
+      "dn" = "dotnet";
+      "dnwr" = "dn watch run --no-hot-reload";
+   };
+
+   sessionVariables = {
+     GITHUB_TOKEN="op://Employee/ghpat/token";
+     MK_TOKEN="op://Employee/media-kind/credential";
    };
   };
 

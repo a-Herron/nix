@@ -21,6 +21,7 @@ lsp.on_attach(function(client, bufnr)
 
   vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end, opts)
   vim.keymap.set("n", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
+  vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 
 end)
 
@@ -38,6 +39,12 @@ lspconfig.jsonls.setup {
 --lspconfig.csharp_ls.setup{}
 lspconfig.omnisharp.setup {
   cmd = { "OmniSharp" },
+  settings = {
+
+    RoslynExtensionsOptions = {
+      --EnableImportCompletion = true
+    }
+  }
 }
 
 lspconfig.hls.setup{}

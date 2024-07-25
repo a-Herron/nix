@@ -11,6 +11,7 @@
       ca = "commit -am";
       co = "checkout";
       p = "push";
+      pu = "pull";
       a = "add";
       aa = "add --all";
       d = "diff";
